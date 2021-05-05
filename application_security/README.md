@@ -24,6 +24,8 @@ Visual Studio Code : https://code.visualstudio.com/
 
 Sql Server Express : https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
+Sql Server Management Studio : https://aka.ms/ssmsfullsetup
+
 SQLite : https://sqlitebrowser.org/  (we'll try to use it, it's more lightweight then sql server)
 
 Burp Suite Community Edition : https://portswigger.net/burp/communitydownload
