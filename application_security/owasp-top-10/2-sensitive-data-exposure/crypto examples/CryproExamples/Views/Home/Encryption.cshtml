@@ -1,0 +1,59 @@
+@model CryptoModel
+@{
+    ViewData["Title"] = "Encryption";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Home" asp-action="Encryption" method="get">
+    <p>
+        Input text: <input type="text" name="password" />
+        <input type="submit" value="Encrypt" />
+    </p>
+</form>
+
+<table>
+    <tbody>
+    <tr>
+        <td><p>Input text</p></td>
+        <td>@Html.DisplayFor(model=>model.Password)</td>
+    </tr>
+    <tr>
+        <td><p>@Html.DisplayNameFor(model => model.EncryptedPassword)</p></td>
+        <td><p>@Html.DisplayFor(model=>model.EncryptedPassword)</p></td>
+    </tr>
+    <tr>
+        <td><p>@Html.DisplayNameFor(model => model.DecryptedPassword)</p></td>
+        <td><p>@Html.DisplayFor(model=>model.DecryptedPassword)</p></td>
+    </tr>
+    <tr>
+        <td>HMAC @Html.DisplayNameFor(model => model.Salt)</td>
+        <td><p>@Html.DisplayFor(model=>model.Salt)</p></td>
+    </tr>
+    <tr>
+        <td>Salted @Html.DisplayNameFor(model => model.Sha512Hash)</td>
+        <td><p>@Html.DisplayFor(model=>model.Sha512Hash)</p></td>
+    </tr>
+    <tr>
+        <td><p>NOT SECURE Salted @Html.DisplayNameFor(model => model.Sha1Hash)</p></td>
+        <td><p>@Html.DisplayFor(model=>model.Sha1Hash)</p></td>
+    </tr>
+     <tr>
+        <td><p>NOT SECURE Unsalted @Html.DisplayNameFor(model => model.Sha1Hash)</p></td>
+        <td><p>@Html.DisplayFor(model=>model.Sha1HashUnsalted)</p></td>
+    </tr>
+    <tr>
+        <td><p>NOT SECURE @Html.DisplayNameFor(model => model.Md5Hash)</p></td>
+        <td><p>@Html.DisplayFor(model=>model.Md5Hash)</p></td>
+    </tr>
+    <tr>
+        <td><p>NOT SECURE @Html.DisplayNameFor(model => model.Base64Encoded)</p></td>
+        <td><p>@Html.DisplayFor(model=>model.Base64Encoded)</p></td>
+    </tr>
+     <tr>
+        <td><p>NOT SECURE @Html.DisplayNameFor(model => model.Base64Decoded)</p></td>
+        <td><p>@Html.DisplayFor(model=>model.Base64Decoded)</p></td>
+    </tr>
+
+    </tbody>
+ </table>
+
